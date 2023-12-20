@@ -4,7 +4,7 @@ import {
   BsList,IoSearch,IoSettingsOutline,CiGrid2H,CgMenuGridO,IoRefresh,IoMdClose} from "./../Components/IconImport.js"
 import keepImg from "../assets/icons/keep_log.png"
 
-const TopNavbar = () => {
+const TopNavbar = ({search,setSearch}) => {
   const styleIcons = {fontSize:"24px",color:"#5f6368",}
   const styleIcons2 = {fontSize: "20px"}
   return (
@@ -24,8 +24,11 @@ const TopNavbar = () => {
         {/* search input */}
         <form action="#" className="flex_rv form_search">
           <div className="search-btn"><IoSearch style={{...styleIcons,...styleIcons2}}/></div>
-          <input type="text" name="" id="" placeholder='Search' className='search-box' />
-          <div className="close-search-btn"><IoMdClose style={styleIcons}/></div>
+          <input type="text" name="" id="" placeholder='Search' className='search-box' 
+            onChange={(e)=>setSearch(e.target.value)}
+            value={search}
+          />
+          <div className="close-search-btn" onClick={()=>setSearch("")}><IoMdClose style={styleIcons}/></div>
         </form>
       </div>
       <div className="navbarSub navbarSub-3 flex_rv">

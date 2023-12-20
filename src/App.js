@@ -8,11 +8,13 @@ import {
   MdOutlineImage,BiUndo,HiDotsVertical,IoIosPersonAdd,
   MdPushPin,
   IoMdClose,FaCircleCheck} from "./Components/IconImport.js"
+import { useState } from 'react';
 function App() {
+  const [search,setSearch]=useState([]);
   return (
    <>
-   <TopNavbar/>
-   <Main/>
+   <TopNavbar search={search} setSearch={setSearch}/>
+   <Main search={search}/>
 {/* icon */}
    {/* <MdOutlineLightbulb/>
    <BsBell  />
@@ -35,7 +37,7 @@ function App() {
    <IoMdClose/>
    <FaCircleCheck/>
     */}
-   
+  
       
    </>
   );
