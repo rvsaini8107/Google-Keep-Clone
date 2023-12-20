@@ -38,6 +38,8 @@ const RightDiv = () => {
   //   description:"",
   //   themeColor:"",
   // })
+  const temp = [{"title":"r","description":"s","themeColor":""},{"title":"r","description":"s","themeColor":""},{"title":"ram","description":"shiva","themeColor":""},{"title":"shiva","description":"shiva shiva","themeColor":""},{"title":"skldfj;sdjlfkasjij;","description":"Please be aware that while these APIs are suitable for demo purposes, they might not provide real or up-to-date product information. Ensure that you comply with the terms of use of any API you decide to use for your project.","themeColor":""},{"title":"sdfasdf","description":"Please be aware that while these APIs are suitable for demo purposes, they might not provide real or up-to-date product information. Ensure that you comply with the terms of use of any API you decide to use for your project.Please be aware that while these APIs are suitable for demo purposes, they might not provide real or up-to-date product information. Ensure that you comply with the terms of use of any API you decide to use for your project.Please be aware that while these APIs are suitable for demo purposes, they might not provide real or up-to-date product information. Ensure that you comply with the terms of use of any API you decide to use for your project.Please be aware that while these APIs are suitable for demo purposes, they might not provide real or up-to-date product information. Ensure that you comply with the terms of use of any API you decide to use for your project.Please be aware that while these APIs are suitable for demo purposes, they might not provide real or up-to-date product information. Ensure that you comply with the terms of use of any API you decide to use for your project.Please be aware that while these APIs are suitable for demo purposes, they might not provide real or up-to-date product information. Ensure that you comply with the terms of use of any API you decide to use for your project.Please be aware that while these APIs are suitable for demo purposes, they might not provide real or up-to-date product information. Ensure that you comply with the terms of use of any API you decide to use for your project.Please be aware that while these APIs are suitable for demo purposes, they might not provide real or up-to-date product information. Ensure that you comply with the terms of use of any API you decide to use for your project.Please be aware that while these APIs are suitable for demo purposes, they might not provide real or up-to-date product information. Ensure that you comply with the terms of use of any API you decide to use for your project.Please be aware that while these APIs are suitable for demo purposes, they might not provide real or up-to-date product information. Ensure that you comply with the terms of use of any API you decide to use for your project.","themeColor":""}];
+  localStorage.setItem("taskArr", JSON.stringify(temp))
   const onSubmitTaskHandler = () => {
     // console.log(title,description,themeColor,taskObj)
     // setTaskObj({
@@ -51,7 +53,7 @@ const RightDiv = () => {
       themeColor: themeColor,
     };
     // console.log(title,description,themeColor,taskObj)
-
+    
     const storedArray = JSON.parse(localStorage.getItem("taskArr")) || [];
     const updatedArray = [...storedArray, taskObj];
     if (localStorage.setItem("taskArr", JSON.stringify(updatedArray))) {
